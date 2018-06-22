@@ -1,11 +1,12 @@
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
+import {FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import 'hammerjs';
-import { SignComponent } from './auth/sign/sign.component';
+import { SignUpComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
 import { TrainingComponent } from './training/training.component';
 import { CurrentTrainingComponent } from './training/current-training/current-training.component';
@@ -14,11 +15,12 @@ import { PastTrainingsComponent } from './training/past-trainings/past-trainings
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignComponent,
+    SignUpComponent,
     LoginComponent,
     TrainingComponent,
     CurrentTrainingComponent,
@@ -31,6 +33,8 @@ import { environment } from '../environments/environment';
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
+    FlexLayoutModule,
+    FormsModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
