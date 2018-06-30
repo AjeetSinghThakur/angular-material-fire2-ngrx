@@ -1,3 +1,4 @@
+import { TrainingService } from './services/training.service';
 import 'hammerjs';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
@@ -46,7 +47,8 @@ import { AuthService } from './services/auth.service';
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
-    AuthService
+    AuthService,
+    TrainingService
   ],
   bootstrap: [AppComponent],
   entryComponents: [StopTraningComponent]
