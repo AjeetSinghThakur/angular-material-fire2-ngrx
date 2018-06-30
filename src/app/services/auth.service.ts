@@ -1,8 +1,8 @@
 import { AuthData } from './../auth/auth-data.model';
 import { User } from './../auth/user.model';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs/internal/Subject';
 
 @Injectable({
   providedIn: 'root'
